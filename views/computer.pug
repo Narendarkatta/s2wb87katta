@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. My name is Narendar reddy katta
+  - let results=[{computer_brand:"HP",computer_processor:"i5",computer_cost:"1625"},{computer_brand:"Dell",computer_processor:"i7",computer_cost:"1207"},{computer_brand:"Apple",computer_processor:"i5",computer_cost:"1434"}]
+  div(class="container")
+    div(class="row")
+      each computers, index in results
+        div(class="col-sm-2") #{computers.computer_brand} - #{computers.computer_processor} - $#{computers.computer_cost}

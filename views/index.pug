@@ -2,13 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Pug Webapps assignment 10
-  button(type="button", class="btn btn-primary" onclick="moreClaps()") Press Me for Contents 
+  p Webapps assignment on PUG
+  button(type="button", class="btn btn-primary" onclick="moreClaps()") Press Me
   div(id="target") Clap for me
+  
   script.
     var clap_count = 0;
     function moreClaps() {
     clap_count = clap_count+2;
+    console.log("moreClaps method implemented");
     document.getElementById("target").innerHTML="Clap "+clap_count +" times";
     }
-  a(href="beer") Beer 
+  a(href="computer") Computer 
