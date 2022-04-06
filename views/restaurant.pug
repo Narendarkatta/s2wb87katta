@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  -var results = [{name:"Chicken Biryani",quantity:3,price:$54},{name:"Nuggets",quantity:2,price:$20},{name:"MilkShake",quantity:1,price:$10}]
+  div(class="container-fluid mt-3")
+  div(class="row")
+  each item in results 
+    div(class="col-sm-2") onclick = #{restaurat.name} #{restaurant.quantity} #{restaurant.price}
